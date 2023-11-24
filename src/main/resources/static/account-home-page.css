@@ -1,0 +1,21 @@
+body {
+    background-color: floralwhite;
+}
+
+.table-container {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a {
+    margin-left: 10px;
+}
+.acc-name{
+    margin-left: 10px;
+}
+
+form {
+    margin-top: 5px;
+    margin-left: 10px;
+}

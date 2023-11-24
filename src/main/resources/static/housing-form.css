@@ -1,0 +1,13 @@
+body {
+    background-color: floralwhite;
+    padding: 20px;
+}
+
+form {
+    margin-left: 600px;
+}
+
+input,select, a {
+    margin-top: 10px;
+}
+

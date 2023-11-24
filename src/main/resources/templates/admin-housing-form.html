@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+    <style>
+        body {
+            background-color: floralwhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form th:action="@{|/admin/${housing.ownerId}/saveHousing|}" th:object="${housing}" method="POST"
+                enctype="multipart/form-data">
+                <label for="city">City :</label>
+                <input id="city" type="text" th:field="*{city}" placeholder="Enter City" class="form-control" required><br>
+
+                <label for="township">Township :</label>
+                <input id="township" type="text" th:field="*{township}" placeholder="Enter Township" class="form-control" required><br>
+
+                <label for="type">Type :</label>
+                <select id="type" th:field="*{type}" class="form-control" required>
+                    <option th:each="housingType : ${housingTypes}" th:value="${housingType}" th:text="${housingType}">
+                    </option>
+                </select><br>
+
+                <label for="length">Length(inches):</label>
+                <input id="length" type="number" th:field="*{length}" class="form-control" required><br>
+
+                <label for="width">Width(inches) :</label>
+                <input id="width" type="number" th:field="*{width}" class="form-control" required><br>
+
+                <label for="floor">Floors :</label>
+                <input id="floor" type="number" th:field="*{floor}" class="form-control" required><br>
+
+                <label for="single">Single Rooms :</label>
+                <input id="single" type="number" th:field="*{single}" class="form-control" required><br>
+
+                <label for="master">Master Rooms :</label>
+                <input id="master" type="number" th:field="*{master}" class="form-control" required><br>
+
+                <label for="parking">Parking :</label>
+                <select id="parking" th:field="*{parking}" class="form-control" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select><br>
+
+                <label for="salePrice">Sale Price(lakhs) :</label>
+                <input id="salePrice" type="number" th:field="*{salePrice}"
+                    placeholder="Skip if you don't want to sell"  class="form-control"><br>
+
+                <label for="rentFee">Monthly Rent Fee(lakhs):</label>
+                <input id="rentFee" type="number" th:field="*{rentFee}" placeholder="Skip if you don't want to rent"  class="form-control"><br>
+
+                <label for="image">Image</label>
+                <input type="file" name="image" id="image" accept="image/*"  class="form-control"><br>
+
+                <label for="moreImages">More Images</label>
+                <input type="file" name="moreImages" id="moreImages" class="form-control" multiple><br>
+
+                <input type="hidden" th:field="*{createdDate}">
+                <input type="hidden" th:field="*{ownerId}">
+                <input type="hidden" th:field="${housing.id}">
+                <input type="hidden" th:field="*{imageUrl}">
+                <button type="submit">Save</button>
+                <a th:href="@{|/admin/${housing.ownerId}/home|}" class="btn btn-primary">Go Back</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

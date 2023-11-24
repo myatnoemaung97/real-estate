@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: floralwhite;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px; /* Adjust the width of the logo image as needed */
+    height: 100px; /* To maintain aspect ratio */
+}
+
+.title h1 {
+    margin: 0;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.nav-items {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-options {
+    margin-top: 10px;
+    margin-left: 600px;
+    margin-right: 300px;
+    border-bottom: 5px;
+    border-color: black;
+    margin-bottom: 10px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0;
+}
+

@@ -1,0 +1,34 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form {
+    max-width: 300px;
+    margin: 0 auto; /* Center the form horizontally within its container */
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures that the image does not create extra space below it */
+  }
+  
